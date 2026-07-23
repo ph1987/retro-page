@@ -486,8 +486,8 @@
   </div>
 
   <div class="countdown">
-    <div class="time" id="countdown-time">1226 DAYS 14 : 45 : 35</div>
-    <div class="sub">until the year 2000... are YOU ready?!</div>
+    <div class="time" id="countdown-time">6027 DAYS 14 : 45 : 35</div>
+    <div class="sub">until the Y2038 bug hits... are YOU ready?!</div>
   </div>
 
   <div class="construction-strip">
@@ -518,11 +518,11 @@ function showSection(section) {
   });
 }
 
-// Y2K countdown
-const y2k = new Date('2000-01-01T00:00:00');
+// Y2038 countdown
+const y2k38 = new Date('2038-01-19T03:14:07Z');
 function updateCountdown() {
   const now = new Date();
-  let diff = y2k - now;
+  let diff = y2k38 - now;
   if (diff < 0) diff = 0;
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
